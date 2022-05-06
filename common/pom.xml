@@ -16,6 +16,7 @@
     <url>http://www.example.com</url>
     <modules>
         <module>service_base</module>
+        <module>common_utils</module>
     </modules>
 
     <properties>

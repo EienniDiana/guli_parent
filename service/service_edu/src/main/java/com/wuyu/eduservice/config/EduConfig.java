@@ -13,4 +13,10 @@ public class EduConfig {
     public ISqlInjector sqlInjector(){
         return new LogicSqlInjector();
     }
+    @Bean
+    public MybatisPlusInterceptor PaginationInnerInterceptor() {
+        MybatisPlusInterceptor interceptor = new MybatisPlusInterceptor();
+        interceptor.addInnerInterceptor(new PaginationInnerInterceptor(DbType.H2));
+        return interceptor;
+    }
 }
